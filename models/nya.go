@@ -8,9 +8,6 @@ import (
 	"time"
 )
 
-
-
-
 type Nya struct {
 	
 	Nya *canvas.Image
@@ -22,8 +19,6 @@ func NewNya(img *canvas.Image) *Nya{
 		Nya: img,
 	}
 }
-
-
 
 func (n *Nya)MoveNya() {
 
@@ -46,12 +41,10 @@ func (n *Nya)MoveNya() {
 			startY = float32(355)
         
         }
-
-       
+      
         directionX := rand.Float32() * 2 - 1 
         directionY := rand.Float32() * 2 - 1 
 
-       
         for startX >= -float32(n.Nya.Size().Width) && startX <= float32(800) &&
             startY >= -float32(n.Nya.Size().Height+100) && startY <= float32(355) {
 

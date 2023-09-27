@@ -1,12 +1,10 @@
 package main
 
-import (
-  
+import (  
     "fyne.io/fyne/v2/app"
     "fyne.io/fyne/v2"
     "juego2/scenes"
     "juego2/models"
-
 )
 
 func main() {
@@ -16,7 +14,6 @@ func main() {
     myWindow.CenterOnScreen()
     init:=scenes.NewInit()
     myWindow.SetContent(init.Content)
-
     myWindow.Canvas().SetOnTypedKey(func(event *fyne.KeyEvent) {
         
         switch event.Name {
@@ -40,7 +37,6 @@ func main() {
         scenes.Player2.Player.Move(fyne.NewPos(models.WindowWidth-models.PaddleWidth-15, float32(scenes.Player2.Player2Y)))
         scenes.Player1.Player.Move(fyne.NewPos(float32(scenes.Player1.Player1X), float32(scenes.Player1.Player1Y)))
     })
-
     
     go func() {
         for newScore := range models.Player2Updates {
@@ -51,7 +47,7 @@ func main() {
 
             }
             
-            // Realiza acciones necesarias cuando se actualiza la puntuación del Jugador 2.
+            
         }
     }()
 
@@ -64,9 +60,6 @@ func main() {
             }
         }
     }()
-    
-
-    //gameLoop(myWindow)
 
     myWindow.ShowAndRun()
 }

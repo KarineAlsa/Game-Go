@@ -1,11 +1,7 @@
 package models
 import (
-	
 	"fyne.io/fyne/v2/canvas"
-	
 )
-
-
 type Player1 struct {
 	Player1X, Player1Y int
 	PaddleHeight, PaddleWidth int
@@ -21,6 +17,3 @@ func NewPlayer1(player1y int, player1x int, paddleHeight int, paddleWidth int, i
 		Player: img,
 	}
 }
-
-
-

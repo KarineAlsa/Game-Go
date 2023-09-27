@@ -5,7 +5,6 @@ import (
 	
 )
 
-
 type Player2 struct {
 	Player2X, Player2Y int
 	PaddleHeight, PaddleWidth int

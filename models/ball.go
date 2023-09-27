@@ -8,7 +8,6 @@ import (
 	"fyne.io/fyne/v2/canvas"
 	"fyne.io/fyne/v2/widget"
 )
-
 const (
     WindowWidth  = 800
     WindowHeight = 400
@@ -16,7 +15,6 @@ const (
     PaddleHeight = 70
     
 )
-
 var (
     player1Y = (WindowHeight - PaddleHeight) / 2
     player2Y = (WindowHeight - PaddleHeight) / 2
@@ -29,8 +27,6 @@ var (
 	Player1Label *widget.Label
     Player2Label *widget.Label
 )
-
-
 type Ball struct {
 	
 	ballX, ballY, ballSize int
@@ -49,8 +45,6 @@ func NewBall(ballSize int,ballx int, bally int,balldx int, balldy int, img *canv
 		ball: img,
 	}
 }
-
-
 
 func (b *Ball) Run(p1 *Player1,p2 *Player2) {
 	b.status=true
