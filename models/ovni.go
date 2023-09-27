@@ -24,7 +24,7 @@ func (o *Ovni)MoveOvni() {
 
 	o.Ovni.Move(fyne.NewPos(-100, -100))
     for {
-        border := rand.Intn(4) // 0: izquierda, 1: arriba, 2: abajo
+        border := rand.Intn(3) // 0: izquierda, 1: arriba, 2: abajo
       
         var startX, startY float32
         switch border {

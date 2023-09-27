@@ -24,9 +24,8 @@ func (n *Nya)MoveNya() {
 
 	n.Nya.Move(fyne.NewPos(-100, -100))
     for {
-        border := rand.Intn(4) // 0: izquierda, 1: arriba, 2: abajo
+        border := rand.Intn(3) // 0: izquierda, 1: arriba, 2: abajo
 
-        
         var startX, startY float32
         switch border {
         case 0: 
@@ -53,8 +52,7 @@ func (n *Nya)MoveNya() {
             startY += directionY
             time.Sleep(10 * time.Millisecond) 
         }
-		
-        
+
         time.Sleep(time.Duration(rand.Intn(5000)+1000) * time.Millisecond)
     }
 }
